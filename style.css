@@ -1,0 +1,263 @@
+﻿:root.dark-mode {
+  --bg-primary: #141414;
+  --bg-secondary: #222;
+  --text-primary: #fff;
+  --text-secondary: #b3b3b3;
+  --border-color: #fff;
+  --profile-bg: transparent;
+}
+
+:root.light-mode {
+  --bg-primary: #f5f5f1;
+  --bg-secondary: #fff;
+  --text-primary: #000;
+  --text-secondary: #666;
+  --border-color: #000;
+  --profile-bg: #f0f0f0;
+}
+
+:root {
+  --bg-primary: #141414;
+  --bg-secondary: #222;
+  --text-primary: #fff;
+  --text-secondary: #b3b3b3;
+  --border-color: #fff;
+  --profile-bg: transparent;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--border-color);
+  outline-offset: 2px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 2rem;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+section[aria-label="Perfis disponíveis"] {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+ul.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 680px;
+}
+
+ul.profiles ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: contents;
+}
+
+.profile {
+  width: 140px;
+  display: block;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 0;
+  border-radius: 12px;
+  overflow: visible;
+  background: var(--profile-bg);
+}
+
+.profile figure {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 2px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.profile:focus-visible figure {
+  border-color: var(--border-color);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  background: var(--bg-secondary);
+  display: block;
+  border: 2px solid transparent;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.profile:hover img,
+.profile:focus-visible img {
+  transform: scale(1.06);
+  border-color: var(--border-color);
+}
+
+figcaption {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+.profile:hover figcaption,
+.profile:focus-visible figcaption {
+  transform: scale(1.06);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  nav.profiles {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    max-width: 480px;
+  }
+
+  .profile {
+    width: 120px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  figcaption {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 16px 12px;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+  }
+
+  nav.profiles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 320px;
+  }
+
+  .profile {
+    width: 100%;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+  }
+
+  .gerenciar {
+    margin-top: 20px;
+  }
+} /* <--- Adicione esta chave para fechar o @media */
+
+/* 2. Coloque os estilos do botão AQUI (fora de qualquer @media) */
+.botao-gerenciar {
+    background: transparent;
+    border: 1px solid grey;
+    color: grey;
+    padding: 10px 30px;
+    /* Dica: use rem ou px em vez de vw para o texto não sumir em telas grandes */
+    font-size: 1rem; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 200;
+    transition: all 0.3s;
+    margin-top: 40px; /* Adicionado para dar espaço dos perfis */
+}
+
+.botao-gerenciar:hover {
+    border-color: #e5e5e5;
+    color: #e5e5e5;
+}

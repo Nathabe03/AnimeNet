@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"Netfllix" </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-toggle">🌙 Escuro</button>
+
+    <main class="conteudo-principal">
+      <h1>Quem está assistindo?</h1>
+
+      <section aria-label="Perfis disponíveis">
+        <ul class="profiles lista-perfis">
+          <li class="item-perfil">
+            <a
+              href="catalogo/catalogo.html"
+              class="profile perfil"
+              aria-label="Perfil Choso"
+            >
+              <figure class="avatar-container">
+                <img src="assets/choso-img.jpg" alt="Avatar Choso" />
+                <figcaption class="nome-perfil">Choso</figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <li class="item-perfil">
+            <a
+              href="catalogo/catalogo.html"
+              class="profile perfil"
+              aria-label="Perfil Suguru"
+            >
+              <figure class="avatar-container">
+                <img src="assets/ghetto-img.jpg" alt="Avatar Suguru" />
+                <figcaption class="nome-perfil">Suguru</figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <li class="item-perfil">
+            <a
+              href="catalogo/catalogo.html"
+              class="profile perfil"
+              aria-label="Perfil Mei"
+            >
+              <figure class="avatar-container">
+                <img src="assets/mei-img.jpg" alt="Avatar Mei" />
+                <figcaption class="nome-perfil">Mei</figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <li class="item-perfil">
+            <a
+              href="catalogo/catalogo.html"
+              class="profile perfil"
+              aria-label="Perfil Maki"
+            >
+              <figure class="avatar-container">
+                <img src="assets/maki-img.png" alt="Avatar Maki" />
+                <figcaption class="nome-perfil">Maki</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="gerenciar">
+        <button type="button" class="botao-gerenciar">Gerenciar perfis</button>
+      </section>
+    </main>
+
+    <script src="theme.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
