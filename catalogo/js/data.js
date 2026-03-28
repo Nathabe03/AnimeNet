@@ -11,12 +11,12 @@ export const categories = [
                 youtube: "https://www.youtube.com/watch?v=d6kBeJjTGnY"
             },
             {
-                img: "https://i.ytimg.com/vi/OQgySPQ5M3Y/maxresdefault.jpg", progress: 0,
-                youtube: "https://www.youtube.com/watch?v=zckJCxYxn1g"
+                img: "https://m.media-amazon.com/images/I/71jt8+W2XHL.jpg", progress: 0,
+                youtube: "https://www.youtube.com/watch?v=1KMcoJBMWE4"
             },
             {
-                img: "https://ingresso-a.akamaihd.net/img/cinema/cartaz/14413-destaque.jpg", progress: 0,
-                youtube: "https://www.youtube.com/watch?v=a06zxOyQrAs"
+                img: "https://i.pinimg.com/564x/90/84/92/908492db4515e6f82fd75d7d9e990b48.jpg", progress: 0,
+                youtube: "https://www.youtube.com/watch?v=kx0nBaS_q50"
             },
         ]
     },
