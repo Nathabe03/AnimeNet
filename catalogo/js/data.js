@@ -25,7 +25,7 @@ export const categories = [
         items: [
             { img: "https://i.pinimg.com/originals/89/77/55/897755fb9c7246f25ad7fa40918521fd.png", top10: true, badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=P_-r11fcDTc" },
             { img: "https://i.pinimg.com/originals/89/77/55/897755fb9c7246f25ad7fa40918521fd.png", top10: true, youtube: "https://www.youtube.com/watch?v=mh48KXaCSxM" },
-            { img: "https://i.pinimg.com/originals/89/77/55/897755fb9c7246f25ad7fa40918521fd.png", badge: "Novo episódio", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=NPItqNsCXM4" },
+            { img: "https://i.pinimg.com/originals/89/77/55/897755fb9c7246f25ad7fa40918521fd.png", badge: "Novo episódio", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=9YNbumFR63E" },
             { img: "https://i.pinimg.com/originals/89/77/55/897755fb9c7246f25ad7fa40918521fd.png", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=pahdCwHJjaU" },
         ]
     },
